@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+        <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+            <enlace href="https: //fonts.googleapis.com/css2? familia= Arena movediza:peso@300;500;700 & display=swap"
+                rel="stylesheet">
+                <style>
+                    :root {
+                        --white: #FFFFFF;
+                        --black: #000000;
+                        --very-light-pink: #C7C7C7;
+                        --text-input-field: #F7F7F7;
+                        --hospital-green: #ACD9B2;
+                        --sm: 14px;
+                        --md: 16px;
+                        --lg: 18px;
+                    }
+
+                    body {
+                        margin: 0;
+                        font-family: 'Quicksand', sans-serif;
+                    }
+
+                    .cards-container {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, 240px);
+                        gap: 26px;
+                        place-content: center;
+                    }
+
+                    .product-card {
+                        width: 240px;
+                    }
+
+                    .product-card img {
+                        width: 240px;
+                        height: 240px;
+                        border-radius: 20px;
+                        object-fit: cover;
+                    }
+
+                    .product-info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-top: 12px;
+                    }
+
+                    .product-info figure {
+                        margin: 0;
+                    }
+
+                    .product-info figure img {
+                        width: 35px;
+                        height: 35px;
+                        cursor: pointer;
+                    }
+
+                    .product-info div p:nth-child(1) {
+                        font-weight: bold;
+                        font-size: var(--md);
+                        margin-top: 0;
+                        margin-bottom: 4px;
+                    }
+
+                    .product-info div p:nth-child(2) {
+                        font-size: var(--sm);
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        color: var(--very-light-pink);
+                    }
+
+                    @media (max-width: 640px) {
+                        .cards-container {
+                            grid-template-columns: repeat(auto-fill, 140px);
+                        }
+
+                        .product-card {
+                            width: 140px;
+                        }
+
+                        .product-card img {
+                            width: 140px;
+                            height: 140px;
+                        }
+                    }
+                </style>
+
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://img.freepik.com/vector-premium/impresionante-estilo-nft-ojo-vidrio-mono-aburrido_361671-269.jpg?w=2000"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://getwalls.io/wallpapers/341765/2022--03--free-ape-monkey-nft-3d-art-background-1904468730-pc.jpg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://stockse.com.br/wp-content/uploads/2022/03/picrew-monkey.jpg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://cdnwp-s3.benzinga.com/wp-content/uploads/2022/01/05195725/Jpeg.jpeg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://wallpaperaccess.com/full/8054300.jpg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                     <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/b1/7e/e6/b17ee6465e7ce7442bf531c99f758e4b.jpg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/bf/db/08/bfdb0852163ac36468dbe39b00601e34.jpg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/5d/16/cd/5d16cd4b1568c1628689360f306ecb62.jpg"
+                    alt="">
+                <div class="product-info">
+                    <div>
+                        <p>$120,00</p>
+                        <p>Monky fachero</p>
+                    </div>
+                    <figure>
+                        <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
