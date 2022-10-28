@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            -black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #acd982;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
+        .add-to-cart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+
+        .product-detail-close {
+            background: var(--white);
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 2;
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .product-detail-close:hover {
+            cursor: pointer;
+        }
+
+        .product-detail>img:nth-child(2) {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .product-info {
+            margin: 24px 24px 0 24px;
+        }
+
+        .product-info p:nth-child(1) {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .product-info p:nth-child(2) {
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+
+        .product-info p:nth-child(3) {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+
+        .dots {
+            text-align: center;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 8px;
+            width: 8px;
+            margin: 0 2px;
+            background-color: var(--very-light-pink);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dots span:nth-child(1) {
+            background-color: var(--hospital-green);
+        }
+
+        @media (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="product-detail">
+        <img src="./iconos/Platzi_YardSale_Icons/icon_close.png" alt="">
+        <img src="https://static.techspot.com/images2/news/bigimage/2021/09/2021-09-10-image-18.jpg"
+            alt="            monkyfachero">
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <div class="product-info">
+                <p>U$D 120.00</p>
+                <p>Monky fachero</p>
+                <p>Creador Anonymous-User-79239
+                    Propietario CryptoPixel
+                    Red BSC
+                    Dirección del contrato 0xe69
+                    Id. del token 607980
+                    Comisión por regalías 1%
+                    Comisión de plataforma 1%</p>
+                <button class="prymary-button">
+                    <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="add to cart">
+                </button>
+            </div>
+        </div>
+
+    </aside>
+
+</body>
+
+</html>
