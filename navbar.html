@@ -16,6 +16,7 @@
         }
 
         body {
+            margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
 
@@ -35,7 +36,7 @@
         }
 
         .navbar-left ul,
-        .navbar-rigth ul {
+        .navbar-right ul {
             list-style: none;
             padding: 0;
             margin: 0;
@@ -46,7 +47,6 @@
 
         .navbar-left {
             display: flex;
-            margin-left: 12px;
         }
 
         .navbar-left ul {
@@ -54,20 +54,18 @@
         }
 
         .navbar-left ul li a,
-        .navbar-rigth ul li a {
+        .navbar-right ul li a {
             text-decoration: none;
             color: var(--very-light-pink);
             border: 1px solid var(--white);
             padding: 8px;
             border-radius: 8px;
-
         }
 
         .navbar-left ul li a:hover,
-        .navbar-rigth ul li a:hover {
-            text-decoration: none;
-            color: var(--very-light-pink);
+        .navbar-right ul li a:hover {
             border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
         }
 
         .navbar-email {
@@ -76,11 +74,14 @@
             margin-right: 12px;
         }
 
-        .navbar-shopping-cart {
-            position: relative;
-
+        .navbar-email img {
+            margin-left: 10px;
+            transform: rotate(90deg);
         }
 
+        .navbar-shopping-cart {
+            position: relative;
+        }
         .navbar-shopping-cart div {
             width: 8px;
             height: 8px;
@@ -138,14 +139,17 @@
                 </li>
             </ul>
         </div>
-        <div class="navbar-right"></div>
-        <ul>
-            <li class="navbar-email">paulsantiagovaldivia@gmail.com</li>
-            <li class="navbar-shopping-cart">
-                <img src="./iconos/Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="shopping cart">
-                <div>3</div>
-            </li>
-        </ul>
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">paulsantiagovaldivia@gmail.com
+                    <img src="./iconos/Platzi_YardSale_Icons/flechita.svg" alt="">
+                </li>
+                <li class="navbar-shopping-cart">
+                    <img src="./iconos/Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="shopping cart">
+                    <div>3</div>
+                </li>
+            </ul>
+        </div>
     </nav>
 </body>
 
