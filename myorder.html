@@ -24,6 +24,8 @@
 
                 body {
                     margin: 0;
+                    font-family: 'Quicksand', sans-serif;
+                    background-color: #373739;
                 }
 
                 .my-order {
@@ -36,6 +38,7 @@
                 .title {
                     font-size: var(--lg);
                     margin-bottom: 40px;
+                    text-align: center;
                 }
 
                 .my-order-container {
@@ -54,7 +57,7 @@
                     grid-template-columns: auto 1fr;
                     gap: 16px;
                     align-items: center;
-                    background-color: var(--text-input-field);
+                    background-color: var(--hospital-green);
                     margin-bottom: 24px;
                     border-radius: 8px;
                     padding: 0 24px;
@@ -72,7 +75,7 @@
 
                 .order p span:nth-child(2) {
                     font-size: var(--sm);
-                    color: var(--very-light-pink);
+                    color: var(--white);
                 }
 
                 .order p:nth-child(2) {
@@ -80,30 +83,32 @@
                     font-weight: bold;
                 }
 
-                .product-info {
+                .shopping-cart {
                     display: grid;
                     grid-template-columns: auto 1fr auto auto;
                     gap: 16px;
                     margin-bottom: 24px;
                     align-items: center;
+                    border: 1px solid var(--hospital-green);
+                    border-radius: 8px;
                 }
 
-                .product-info figure {
+                .shopping-cart figure {
                     margin: 0;
                 }
 
-                .product-info figure img {
+                .shopping-cart figure img {
                     width: 70px;
                     height: 70px;
                     border-radius: 20px;
                     object-fit: cover;
                 }
 
-                .product-info p:nth-child(2) {
+                .shopping-cart p:nth-child(2) {
                     color: var(--very-light-pink);
                 }
 
-                .product-info p:nth-child(3) {
+                .shopping-cart p:nth-child(3) {
                     font-size: var(--md);
                     font-weight: bold;
                 }
@@ -113,9 +118,10 @@
             <body>
                 <div class="my-order">
                     <div class="my-order-container">
+                        <h1 class="title">My order</h1> 
                         <div class="my-order-content">
-                            <h1 class="title">My order</h1>
-                            <div>
+
+                            <div class="order">
                                 <p>
                                     <span>27/10/2022</span>
                                     <span>6 articles</span>
@@ -123,7 +129,7 @@
                                 <p>U$D560.00</p>
                             </div>
                         </div>
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://static.techspot.com/images2/news/bigimage/2021/09/2021-09-10-image-18.jpg"
                                     alt="monkyfachero">
@@ -132,7 +138,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://img.freepik.com/vector-premium/impresionante-estilo-nft-ojo-vidrio-mono-aburrido_361671-269.jpg?w=2000"
                                     alt="monkyfachero">
@@ -141,7 +147,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://getwalls.io/wallpapers/341765/2022--03--free-ape-monkey-nft-3d-art-background-1904468730-pc.jpg"
                                     alt="monkyfachero">
@@ -150,7 +156,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://stockse.com.br/wp-content/uploads/2022/03/picrew-monkey.jpg"
                                     alt="monkyfachero">
@@ -159,7 +165,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://cdnwp-s3.benzinga.com/wp-content/uploads/2022/01/05195725/Jpeg.jpeg"
                                     alt="mokyfacero">
@@ -168,7 +174,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://wallpaperaccess.com/full/8054300.jpg" alt="mokyfachero">
                             </figure>
@@ -176,7 +182,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://i.pinimg.com/736x/b1/7e/e6/b17ee6465e7ce7442bf531c99f758e4b.jpg"
                                     alt="mokyfachero">
@@ -185,7 +191,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://i.pinimg.com/736x/bf/db/08/bfdb0852163ac36468dbe39b00601e34.jpg"
                                     alt="mokyfachero">
@@ -194,7 +200,7 @@
                             <p>Monky fachero</p>
                         </div>
 
-                        <div class="product-info">
+                        <div class="shopping-cart">
                             <figure>
                                 <img src="https://i.pinimg.com/736x/5d/16/cd/5d16cd4b1568c1628689360f306ecb62.jpg"
                                     alt="mokyfachero">

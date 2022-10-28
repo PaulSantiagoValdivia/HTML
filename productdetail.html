@@ -8,33 +8,20 @@
     <title>Document</title>
     <style>
         :root {
-            --white: #ffffff;
-            -black: #000000;
-            --very-light-pink: #c7c7c7;
-            --text-input-field: #f7f7f7;
-            --hospital-green: #acd982;
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
         }
 
         body {
+            margin: 0;
             font-family: 'Quicksand', sans-serif;
-        }
-
-        .primary-button {
-            background-color: var(--hospital-green);
-            border-radius: 8px;
-            border: none;
-            color: var(--white);
-            width: 100%;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
-        }
-
-        .add-to-cart-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: #373739;
         }
 
         .product-detail {
@@ -42,6 +29,8 @@
             padding-bottom: 24px;
             position: absolute;
             right: 0;
+            border: 1px solid palevioletred;
+            border-radius: 8px;
         }
 
         .product-detail-close {
@@ -54,6 +43,8 @@
             z-index: 2;
             padding: 12px;
             border-radius: 50%;
+            border: 1px solid   var(--hospital-green);
+            border-radius: 8px;
         }
 
         .product-detail-close:hover {
@@ -72,42 +63,50 @@
         }
 
         .product-info p:nth-child(1) {
+            color: pink;
             font-weight: bold;
             font-size: var(--md);
             margin-top: 0;
             margin-bottom: 4px;
+            border: 1px solid yellow;
+            border-radius: 8px;
         }
 
         .product-info p:nth-child(2) {
-            color: var(--very-light-pink);
+            color: var(--hospital-green);
             font-size: var(--md);
             margin-top: 0;
-            margin-bottom: 36px;
+            margin-bottom: 15px;
+            border: 1px solid yellow;
+            border-radius: 8px;
         }
 
         .product-info p:nth-child(3) {
             color: var(--very-light-pink);
             font-size: var(--sm);
             margin-top: 0;
-            margin-bottom: 36px;
+            margin-bottom: 66px;
+            border: 1px solid yellow;
+            border-radius: 8px;
         }
 
-        .dots {
-            text-align: center;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 8px;
-            width: 8px;
-            margin: 0 2px;
-            background-color: var(--very-light-pink);
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .dots span:nth-child(1) {
+        .primary-button {
             background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+            
+        }
+
+        .add-to-cart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @media (max-width: 640px) {
@@ -120,9 +119,10 @@
 
 <body>
     <aside class="product-detail">
-        <img src="./iconos/Platzi_YardSale_Icons/icon_close.png" alt="">
-        <img src="https://static.techspot.com/images2/news/bigimage/2021/09/2021-09-10-image-18.jpg"
-            alt="            monkyfachero">
+        <div class="product-detail-close">
+            <img src="./iconos/Platzi_YardSale_Icons/icon_close.png" alt="close">
+        </div>
+        <img src="https://static.techspot.com/images2/news/bigimage/2021/09/2021-09-10-image-18.jpg" alt="monkyfachero">
         <div class="dots">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -137,12 +137,12 @@
                     Id. del token 607980
                     Comisión por regalías 1%
                     Comisión de plataforma 1%</p>
-                <button class="prymary-button">
+                <button class="primary-button add-to-cart-button">
                     <img src="./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="add to cart">
+                    Add to cart
                 </button>
             </div>
         </div>
-
     </aside>
 
 </body>

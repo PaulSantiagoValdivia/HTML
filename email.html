@@ -25,6 +25,8 @@
         body
         {
             margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #373739;
         }
         .login
         {
@@ -40,12 +42,14 @@
             auto;
             width: 300px;
         }
+        
         .logo
         {
             width: 150px;
             margin-bottom: 48px;
             justify-self: center;
             display: none;
+        
         }
         .label
         {
@@ -70,7 +74,7 @@
         .input 
         {
             background-color: var(--text-input-field);
-            border: none;
+            border: 1px solid var(--hospital-green);
             border-radius: 8px;
             height: 30px;
             font-size: var(--md);
@@ -129,11 +133,11 @@
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/favicon_yard_sale.svg" alt="logo" class="logo">
+                <img  src="./logos/favicon_yard_sale.svg" alt="logo" class="logo">
             <form action="/" 
             class="form">
                 <label for="email" 
-                class="label">Email</label>
+                class="label">Email Adress</label>
                 <input type="text" 
                 id="email"
                 placeholder="Ejemplo@gmail.com" 
