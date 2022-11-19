@@ -3,19 +3,19 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
 const menuShoppingCart = document.querySelector('.navbar-shopping-cart');
 const mobileMenu = document.querySelector('.mobile-menu');
-const aside = document.querySelector('.product-detail');
+const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
 const cardContainer = document.querySelector('.cards-container');
 menuEmail.addEventListener('click', () => {
-    const isAsideClosed = aside.classList.contains('inactive');
+    const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
     if (!isAsideClosed) {
-        aside.classList.add('inactive')
+        shoppingCartContainer.classList.add('inactive')
     }
     desktopMenu.classList.toggle('inactive');
 });
 menuHamIcon.addEventListener('click', () => {
-    const isAsideClosed = aside.classList.contains('inactive');
+    const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
     if (!isAsideClosed) {
-        aside.classList.add('inactive')
+        shoppingCartContainer.classList.add('inactive')
     }
     mobileMenu.classList.toggle('inactive');
 });
@@ -28,7 +28,7 @@ menuShoppingCart.addEventListener('click', () => {
     if (!isDesktopMenuClosed) {
         desktopMenu.classList.add('inactive');
     }
-    aside.classList.toggle('inactive');
+    shoppingCartContainer.classList.toggle('inactive');
 });
 
 const productList = [];
@@ -82,38 +82,38 @@ productList.push({
     price: 300,
     image: 'https://static.techspot.com/images2/news/bigimage/2021/09/2021-09-10-image-18.jpg'
 });
-function renderProducts(arr){
+function renderProducts(arr) {
     for (product of arr) {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
-        
+
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
-            
+
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
-        
+
         const productInfoDiv = document.createElement('div');
-           const productPrice = document.createElement('p');
+        const productPrice = document.createElement('p');
         productPrice.innerText = '$' + product.price;
         const productName = document.createElement('p');
         productName.innerText = product.name;
-    
+
         productInfoDiv.appendChild(productPrice);
         productInfoDiv.appendChild(productName);
-    
+
         const productInfoFigure = document.createElement('figure');
         const productImgCart = document.createElement('img');
         productImgCart.setAttribute('src', "./iconos/Platzi_YardSale_Icons/bt_add_to_cart.svg")
-    
+
         productInfoFigure.appendChild(productImgCart);
-    
+
         productInfo.appendChild(productInfoDiv);
         productInfo.appendChild(productInfoFigure);
-    
+
         productCard.appendChild(productImg);
         productCard.appendChild(productInfo);
-    
+
         cardContainer.appendChild(productCard);
     }
 }
