@@ -1,3 +1,4 @@
+/*General*/
 :root {
     --white: #ffffff;
     --black: #000000;
@@ -11,10 +12,12 @@ body {
     font-family: 'Quicksand', sans-serif;
     background-color: #373739;
 }
-.inactive{
+
+.inactive {
     display: none;
 }
 
+/*Nav bar General*/
 nav {
     display: flex;
     justify-content: space-between;
@@ -61,7 +64,7 @@ nav {
 .navbar-right ul li a:hover {
     border: 1px solid var(--hospital-green);
     color: var(--hospital-green);
-    
+
 }
 
 .navbar-email {
@@ -95,6 +98,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 .desktop-menu {
     position: absolute;
     top: 60px;
@@ -125,18 +129,63 @@ nav {
     padding-top: 20px;
     border-top: 1px solid var(--hospital-green);
 }
-.desktop-menu ul li:last-child a{
+
+.desktop-menu ul li:last-child a {
     color: var(--hospital-green);
     font-size: var(--sm);
-    
+
 }
-.desktop-menu ul li a{
+
+.desktop-menu ul li a {
     color: var(--black);
     text-decoration: none;
     margin-bottom: 20px;
     display: inline-block;
-    
+
 }
+
+/*Menu mobile*/
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    padding: 24px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--hospital-green);
+    font-weight: bold;
+    /* margin-bottom: 24px; */
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--hospital-green);
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 24px 0 0;
+    list-style: none;
+
+}
+
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--hospital-green);
+}
+
+.mobile-menu ul li {
+    margin-bottom: 24px;
+}
+
+.email {
+    font-size: var(--sm);
+    font-weight: 300;
+}
+
+.sign-out {
+    font-size: var(--sm);
+}
+
 @media (max-width: 640px) {
     .menu {
         display: block;
@@ -147,6 +196,16 @@ nav {
     }
 
     .navbar-email {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 641px) {
+    .mobile-menu {
         display: none;
     }
 }
