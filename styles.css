@@ -110,6 +110,7 @@ nav {
     border-radius: 6px;
     border: 1px solid var(--hospital-green);
     padding: 20px 20px 0 20px;
+    background-color: #373739;
 }
 
 .desktop-menu ul {

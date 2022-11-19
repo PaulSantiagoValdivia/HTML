@@ -1,12 +1,18 @@
 const menuEmail = document.querySelector('.navbar-email');
 const desktopMenu = document.querySelector('.desktop-menu');
 const menuHamIcon = document.querySelector('.menu');
-const menuShoppingCart = document.querySelector('.navbar-shopping-cart');
+const menuShoppingCartIcon = document.querySelector('.navbar-shopping-cart');
+const producDetailCloseIcon=document.querySelector('.product-detail-close');
 const mobileMenu = document.querySelector('.mobile-menu');
 const shoppingCartContainer = document.querySelector('#shoppingCartContainer');
+const producDetailContainer = document.querySelector('#productDetail');
 const cardContainer = document.querySelector('.cards-container');
 menuEmail.addEventListener('click', () => {
     const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
+    const isProductDetailClosed = producDetailContainer.classList.contains('inactive'); 
+    if(!isProductDetailClosed){
+        producDetailContainer.classList.add('inactive');
+    }
     if (!isAsideClosed) {
         shoppingCartContainer.classList.add('inactive')
     }
@@ -14,23 +20,33 @@ menuEmail.addEventListener('click', () => {
 });
 menuHamIcon.addEventListener('click', () => {
     const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
+    const isProductDetailClosed = producDetailContainer.classList.contains('inactive'); 
+    if(!isProductDetailClosed){
+        producDetailContainer.classList.add('inactive');
+    }
     if (!isAsideClosed) {
         shoppingCartContainer.classList.add('inactive')
     }
     mobileMenu.classList.toggle('inactive');
 });
-menuShoppingCart.addEventListener('click', () => {
+menuShoppingCartIcon.addEventListener('click', () => {
     const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
-    const isDesktopMenuClosed = desktopMenu.classList.contains('inactive')
+    const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
+    const isProductDetailClosed = producDetailContainer.classList.contains('inactive');
     if (!isMobileMenuClosed) {
         mobileMenu.classList.add('inactive');
+    } 
+    if(!isProductDetailClosed){
+        producDetailContainer.classList.add('inactive');
     }
     if (!isDesktopMenuClosed) {
         desktopMenu.classList.add('inactive');
     }
     shoppingCartContainer.classList.toggle('inactive');
 });
-
+producDetailCloseIcon.addEventListener('click', () => {
+    producDetailContainer.classList.add('inactive')
+});
 const productList = [];
 productList.push({
     name: 'Monky fachero',
@@ -89,7 +105,12 @@ function renderProducts(arr) {
 
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
-
+        productImg.addEventListener('click',() =>{
+        desktopMenu.classList.add('inactive');
+        shoppingCartContainer.classList.add('inactive');
+        producDetailContainer.classList.remove('inactive');
+        });
+        
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
 
